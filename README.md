@@ -22,6 +22,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 - ECR Image: https://snipboard.io/vGaeqJ.jpg
 - EC2 Instance: https://snipboard.io/GfpQ6k.jpg
 
+
 ## 📦 Project Structure
 
 `/home/quest/
@@ -47,6 +48,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 - Screenshot: https://snipboard.io/RMwiUC.jpg
 
 
+---
 ## 🚀 Project Overview
 
 - Docker containerization
@@ -67,6 +69,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 - AWS ECR
 - Terraform
 - Docker
+
 
 ---
 
@@ -91,38 +94,40 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 
 1. Build Docker image
  
-docker build -t quest-app .
+- docker build -t quest-app .
    
 2. Run container
 
-docker run -p 3000:3000 quest-app
+- docker run -p 3000:3000 quest-app
 
 3. Test locally
 
-curl http://localhost:3000
+- curl http://localhost:3000
 
 
 ☁️ Cloud Deployment (AWS)
 
 1. Docker Image Push:
 
-aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin <ECR-URL>
-docker tag quest-app:latest <ECR-URL>/quest-app:latest
-docker push <ECR-URL>/quest-app:latest
+- aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin <ECR-URL>
+- docker tag quest-app:latest <ECR-URL>/quest-app:latest
+- docker push <ECR-URL>/quest-app:latest
 
 2. Terraform Apply
 
-terraform init
-terraform apply
+- terraform init
+- terraform apply
 
 3. ECS Deployment (if required)
 
 - In AWS Console → ECS → Services → quest-service → Deployments → "Force new deployment".
 
 
+
 🔐 Security Groups
 
 - Ensure ports 80, 443, and 3000 are open in your ECS service’s security group.
+
 
 📈 Health Check
 
@@ -139,19 +144,4 @@ Target group uses:
 - Add proper logging and error handling in the app
 - Container health checks (HEALTHCHECK in Dockerfile)
 - Set up CI/CD pipeline using GitHub Actions or AWS CodePipeline
-- 
-
-📁 Submission Checklist
-- Hosted Git repo.
-- All IaC (Terraform) files
-- Dockerfile for Node.js app
-- README with usage and architecture documentation
-- Live deployment link
-- Screenshots.
-
-
-
-
-
-
-
+- AWS Cloudwatch Monitoring & Logging
