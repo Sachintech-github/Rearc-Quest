@@ -6,9 +6,9 @@
 
 ✅ Hosted on AWS using ECS Fargate and ALB
 
-✅ Screenshots included (index page, health check, ECS console)
+✅ Website URL and Screenshots
 
-Website URL: https://sachincareer.in.net 
+Website: https://sachincareer.in.net 
 ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 
 - All stages from Website: https://snipboard.io/BHFQ3j.jpg
@@ -24,7 +24,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 
 ## 📦 Project Structure
 
-/home/quest/
+```/home/quest/
 ├── Dockerfile
 ├── README.md
 ├── bin
@@ -41,7 +41,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 │   └── 000.js
 ├── terraform.tfstate
 ├── terraform.tfstate.backup
-└── variables.tf
+└── variables.tf```
 
 - Screenshot: https://snipboard.io/RMwiUC.jpg
 
