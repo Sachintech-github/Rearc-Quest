@@ -24,7 +24,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 
 ## 📦 Project Structure
 
-/home/quest/
+``/home/quest/
 ├── Dockerfile
 ├── README.md
 ├── bin
@@ -41,7 +41,7 @@ ALB DNS: https://quest-alb-216061199.ap-south-1.elb.amazonaws.com/
 │   └── 000.js
 ├── terraform.tfstate
 ├── terraform.tfstate.backup
-└── variables.tf
+└── variables.tf``
 
 - Screenshot: https://snipboard.io/RMwiUC.jpg
 
